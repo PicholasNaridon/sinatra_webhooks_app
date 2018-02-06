@@ -1,0 +1,12 @@
+source 'https://rubygems.org'
+
+gem 'sinatra'
+gem 'httparty'
+gem 'tinypass'
+gem 'httpserver'
+
+group :test, :development do
+  gem 'rspec'
+  gem 'rack-test'
+  gem 'pry'
+end
