@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'tinypass'
-
-# myapp.rb
 require 'sinatra'
 require 'json'
 require 'httpclient'
@@ -48,9 +46,9 @@ get "/webhooks" do
   end
   response = JSON.parse(decrypt)
   if response["event"] == "subscription_auto_renewed" || response["event"] =="new_purchase"
-    id = get_payment_id(api_token, aid, response["uid"], response["rid"]) 
-    send_receipt(api_token, aid, id)
+    id = get_payment_id(api_token, aid, response["uid"], response["rid"])
+    send_receipt(api_token, aid, id) #sends the email
   else
-    return "didn't do shit"
+    return "didn't do shit" # sad path
   end
 end
