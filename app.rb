@@ -1,7 +1,6 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'tinypass'
-require 'httpserver'
 
 
 # myapp.rb
@@ -17,5 +16,7 @@ get "/webhooks" do
   if (params.has_key?(:data))
     decrypt = Tinypass::SecurityUtils.decrypt('', params[:data])
   end
-  return decrypt
+   decrypt
+
+
 end
