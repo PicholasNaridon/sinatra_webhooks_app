@@ -9,7 +9,7 @@ GEM
       domain_name (~> 0.5)
     httparty (0.15.6)
       multi_xml (>= 0.5.2)
-    httpserver (0.0.6)
+    httpclient (2.8.3)
     method_source (0.9.0)
     mime-types (2.99.3)
     multi_json (1.12.2)
@@ -59,7 +59,7 @@ PLATFORMS
 
 DEPENDENCIES
   httparty
-  httpserver
+  httpclient
   pry
   rack-test
   rspec
